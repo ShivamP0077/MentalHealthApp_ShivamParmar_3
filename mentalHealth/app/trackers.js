@@ -2,7 +2,6 @@ import React from "react";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import WalkingTrackerScreen from "../screens/WalkingTrackerScreen";
-import SleepTrackerScreen from "../screens/SleepTrackerScreen";
 import StreakTrackerScreen from "../screens/StreakScreen";
 import { View, Text } from "react-native";
 
@@ -19,7 +18,7 @@ export default function TrackersScreen() {
         }}
       >
         <Tab.Screen name="Walking" component={WalkingTrackerScreen} />
-        <Tab.Screen name="Sleep" component={SleepTrackerScreen} />
+        
         <Tab.Screen name="Streak" component={StreakTrackerScreen} />
       </Tab.Navigator>
     </NavigationContainer>

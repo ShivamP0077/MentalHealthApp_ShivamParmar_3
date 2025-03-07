@@ -5,7 +5,7 @@ import HomeScreen from "../app/HomeScreen"
 import MeditationScreen from "../screens/MeditationScreen"
 import JournalScreen from "../screens/JournalScreen"
 import WalkingTrackerScreen from "../screens/WalkingTrackerScreen"
-import SleepTrackerScreen from "../screens/SleepTrackerScreen"
+
 import ForumScreen from "../screens/ForumScreen"
 import LearningProgramScreen from "../screens/LearningProgramScreen"
 import StreakScreen from "../screens/StreakScreen"
@@ -40,8 +40,6 @@ const TabNavigator = () => {
                         iconName = focused ? "journal" : "journal-outline"
                     } else if (route.name === "Walking") {
                         iconName = focused ? "footsteps" : "footsteps-outline"
-                    } else if (route.name === "Sleep") {
-                        iconName = focused ? "moon" : "moon-outline"
                     } else if (route.name === "Forum") {
                         iconName = focused ? "people" : "people-outline"
                     } else if (route.name === "More") {
