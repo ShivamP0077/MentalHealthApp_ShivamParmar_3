@@ -14,8 +14,8 @@ export default function Layout() {
             iconName = focused ? "leaf" : "leaf-outline";
           } else if (route.name === "journal") {
             iconName = focused ? "book" : "book-outline";
-          } else if (route.name === "sleep") {
-            iconName = focused ? "moon" : "moon-outline";
+          } else if (route.name === "trackers") {
+            iconName = focused ? "bar-chart" : "bar-chart-outline";
           } else {
             iconName = focused ? "menu" : "menu-outline"; // More tab icon
           }
@@ -37,7 +37,11 @@ export default function Layout() {
       <Tabs.Screen name="index" options={{ title: "Home" }} />
       <Tabs.Screen name="meditation" options={{ title: "Meditation" }} />
       <Tabs.Screen name="journal" options={{ title: "Journal" }} />
-      <Tabs.Screen name="sleep" options={{ title: "Sleep" }} />
+      
+      {/* ✅ Trackers Tab (Combines Walking, Sleep, and Streak) */}
+      <Tabs.Screen name="trackers" options={{ title: "Trackers" }} />
+
+      {/* More Tab for additional features */}
       <Tabs.Screen name="more" options={{ title: "More", href: "/more" }} />
     </Tabs>
   );
