@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { View, Text, StyleSheet, TouchableOpacity, FlatList, Image } from "react-native"
 import { Audio } from "expo-av"
 import { Ionicons } from "@expo/vector-icons"
+import { router, useRouter } from "expo-router"
 // import { ref, listAll, getDownloadURL } from "firebase/storage"
 // import { storage } from "../App"
 
@@ -90,6 +91,10 @@ const MeditationScreen = () => {
     } catch (error) {
       console.log("Error playing sound:", error)
     }
+  }
+
+  const goTo30Days = ()=>{
+      router.push("/LearningProgramScreen")
   }
 
   const onPlaybackStatusUpdate = (status) => {
@@ -191,7 +196,13 @@ const MeditationScreen = () => {
             </TouchableOpacity>
           </View>
         </View>
+
       )}
+
+
+         <TouchableOpacity style={styles.button} onPress={goTo30Days}>
+          <Text style={styles.buttonText}>GO TO 30 Day Chalangs</Text>
+        </TouchableOpacity>
     </View>
   )
 }
@@ -341,6 +352,19 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: "#666",
     textAlign: "center",
+  },
+  button: {
+    backgroundColor: "#4A90E2",
+    borderRadius: 12,
+    paddingVertical: 16,
+    paddingHorizontal: 24,
+    width: "100%",
+    alignItems: "center",
+  },
+  buttonText: {
+    color: "#FFFFFF",
+    fontSize: 16,
+    fontWeight: "600",
   },
 })
 
